@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "react-app",
+    "standard"
+  ],
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ]
+  }
+}
