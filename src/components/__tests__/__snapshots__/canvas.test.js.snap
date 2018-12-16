@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Canvas /> should render without crashing 1`] = `
+<div
+  className="Container"
+>
+  <canvas
+    className="Canvas"
+  />
+</div>
+`;

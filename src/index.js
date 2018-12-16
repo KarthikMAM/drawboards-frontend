@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Styles from './index.module.scss'
+import Canvas from './components/canvas'
+import './index.scss'
 
-console.log(Styles)
-
-ReactDOM.render(<h1 className={Styles.Hello}>Hello world</h1>, document.getElementById('root'))
+ReactDOM.render(<Canvas />, document.getElementById('root'))
