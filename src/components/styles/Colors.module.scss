@@ -1,0 +1,16 @@
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Title {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+.Button {
+  height: 30px;
+  width: 30px;
+}
