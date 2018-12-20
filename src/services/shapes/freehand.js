@@ -1,7 +1,7 @@
 import update from 'immutability-helper'
 
-import { READY, CREATE, RECORDING, FINISH } from '../../constants/states'
-import { INIT, MOUSEMOVE, MOUSEDOWN, MOUSEUP, MOUSELEAVE } from '../../constants/events'
+import { READY, RECORDING, FINISH } from '../../constants/states'
+import { MOUSEMOVE, MOUSEDOWN, MOUSEUP, MOUSELEAVE } from '../../constants/events'
 
 export const draw = (data, canvasContext, width, height) => {
   canvasContext.strokeStyle = data.stroke || 'black'
@@ -16,13 +16,6 @@ export const draw = (data, canvasContext, width, height) => {
 }
 
 export const transitions = {
-  [INIT]: {
-    type: INIT,
-    transitions: {
-      [CREATE]: READY,
-    },
-    reduce: (data, action) => data,
-  },
   [MOUSEMOVE]: {
     type: MOUSEMOVE,
     transitions: {

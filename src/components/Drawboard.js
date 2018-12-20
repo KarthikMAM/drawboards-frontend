@@ -20,12 +20,13 @@ export default class Drawboard extends PureComponent {
 
   initShape = (shape) => this.setState((state) => ({
     currentState: READY,
-    currentShape: shapes[shape].transitions[INIT].reduce(undefined, {
-      payload: {
-        fill: state.fill,
-        stroke: state.stroke,
-      },
-    }),
+    currentShape: {
+      type: shape,
+      points: [],
+      stroke: null,
+      fill: null,
+      __typename: 'Overlay',
+    },
   }))
 
   shapeButtons = [LINE, FREEHAND, POLYGON, SQUARE].map(shape => ({
@@ -35,14 +36,9 @@ export default class Drawboard extends PureComponent {
 
   componentDidUpdate (prevProps, prevState) {
     if (this.state.currentState !== prevState.currentState && this.state.currentState === FINISH) {
-      this.setState((state, props) => {
-        this.props.onChange([...props.shapes, state.currentShape])
+      this.props.onChange([...this.props.shapes, this.state.currentShape])
 
-        return {
-          currentShape: this.initShape(state.currentShape.type),
-          currentState: READY,
-        }
-      })
+      return this.initShape(this.state.currentShape.type)
     }
   }
 

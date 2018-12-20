@@ -1,7 +1,8 @@
 import update from 'immutability-helper'
 
-import { READY, CREATE, RECORDING, FINISH } from '../../constants/states'
-import { INIT, MOUSEUP, MOUSEDOWN, MOUSEMOVE } from '../../constants/events'
+import { READY, RECORDING, FINISH } from '../../constants/states'
+import { MOUSEUP, MOUSEDOWN, MOUSEMOVE } from '../../constants/events'
+import { LINE } from '../../constants/shapes'
 
 export const draw = (data, canvasContext, scaleX, scaleY) => {
   canvasContext.strokeStyle = data.stroke || 'black'
@@ -10,20 +11,21 @@ export const draw = (data, canvasContext, scaleX, scaleY) => {
   canvasContext.stroke()
 }
 
+const EMPTY_DATA = {
+  type: LINE,
+  points: [],
+  stroke: null,
+  fill: null,
+  __typename: 'Overlay',
+}
+
 export const transitions = {
-  [INIT]: {
-    type: INIT,
-    transitions: {
-      [CREATE]: READY,
-    },
-    reduce: (data, action) => data,
-  },
   [MOUSEDOWN]: {
     type: MOUSEDOWN,
     transitions: {
       [READY]: RECORDING,
     },
-    reduce: (data, action) => update(data, {
+    reduce: (data = EMPTY_DATA, action) => update(data, {
       points: {
         $set: [
           action.payload,
@@ -37,7 +39,7 @@ export const transitions = {
     transitions: {
       [RECORDING]: RECORDING,
     },
-    reduce: (data, action) => update(data, {
+    reduce: (data = EMPTY_DATA, action) => update(data, {
       points: {
         1: {
           $set: action.payload,
@@ -50,7 +52,7 @@ export const transitions = {
     transitions: {
       [RECORDING]: FINISH,
     },
-    reduce: (data, action) => update(data, {
+    reduce: (data = EMPTY_DATA, action) => update(data, {
       points: {
         1: {
           $set: action.payload,
