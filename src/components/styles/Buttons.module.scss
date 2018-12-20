@@ -1,0 +1,21 @@
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px;
+  
+  > * {
+    margin: 4px;
+  }
+}
+
+.Title {
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-transform: capitalize;
+}
+
+.Button {
+  padding: 8px;
+  text-transform: capitalize;
+}
