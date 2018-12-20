@@ -4,15 +4,45 @@
     "standard"
   ],
   "rules": {
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
     "comma-dangle": [
       "error",
       "always-multiline"
     ],
+    "import/no-duplicates": "error",
     "import/newline-after-import": [
       "error",
       {
         "count": 1
       }
-    ]
+    ],
+    "import/no-cycle": "error",
+    "import/no-self-import": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/no-unresolved": "error"
   }
 }
