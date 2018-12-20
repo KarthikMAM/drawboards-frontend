@@ -23,8 +23,8 @@ export default class Drawboard extends PureComponent {
     currentShape: {
       type: shape,
       points: [],
-      stroke: null,
-      fill: null,
+      stroke: state.stroke,
+      fill: state.fill,
       __typename: 'Overlay',
     },
   }))

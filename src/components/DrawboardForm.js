@@ -22,7 +22,7 @@ export default class DrawboardForm extends PureComponent {
           label='Background'
           accept='image/jpeg,image/jpg'
           onChange={this.props.onChange} />
-        <Input required type='submit' />
+        <Input required type='submit' value="Submit" />
       </form>
     )
   }
