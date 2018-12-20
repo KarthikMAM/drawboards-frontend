@@ -1,0 +1,8 @@
+export const INIT = 'init'
+export const CLICK = 'click'
+export const MOUSEUP = 'mouseup'
+export const MOUSEDOWN = 'mousedown'
+export const MOUSEMOVE = 'mousemove'
+export const MOUSEENTER = 'mouseenter'
+export const MOUSELEAVE = 'mouseleave'
+export const DOUBLECLICK = 'dblclick'
