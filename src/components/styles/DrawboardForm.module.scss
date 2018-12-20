@@ -1,0 +1,12 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  border-radius: 4px;
+  padding: 8px;
+
+  > * {
+    margin: 8px;
+    border-radius: 2px;
+  }
+}
