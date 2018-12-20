@@ -1,0 +1,10 @@
+@import './variables';
+@import './grid';
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
