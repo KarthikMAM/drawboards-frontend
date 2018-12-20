@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 
 import shapes from '../services/shapes'
-import { CLICK, MOUSEUP, MOUSEDOWN, MOUSEMOVE, MOUSEENTER, MOUSELEAVE, DOUBLECLICK, INIT } from '../constants/events'
+import { CLICK, MOUSEUP, MOUSEDOWN, MOUSEMOVE, MOUSEENTER, MOUSELEAVE, DOUBLECLICK } from '../constants/events'
 import { RECORDING, FINISH, READY } from '../constants/states'
 import { LINE, FREEHAND, POLYGON, SQUARE } from '../constants/shapes'
 
