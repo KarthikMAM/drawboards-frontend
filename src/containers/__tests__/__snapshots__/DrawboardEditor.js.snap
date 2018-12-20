@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL various states: after get 1`] = `
+Object {
+  "data": Object {
+    "error": undefined,
+    "fetchMore": [Function],
+    "getDrawboard": Object {
+      "id": "1",
+      "image": Object {
+        "bucket": "karthik",
+        "key": "karthik",
+      },
+      "overlays": null,
+      "title": "karthik",
+    },
+    "loading": false,
+    "networkStatus": 7,
+    "refetch": [Function],
+    "startPolling": [Function],
+    "stopPolling": [Function],
+    "subscribeToMore": [Function],
+    "updateQuery": [Function],
+    "variables": Object {
+      "id": "1",
+    },
+  },
+  "id": "1",
+  "updateDrawboard": [Function],
+}
+`;
+
+exports[`GraphQL various states: after update 1`] = `
+Object {
+  "data": Object {
+    "error": undefined,
+    "fetchMore": [Function],
+    "getDrawboard": Object {
+      "id": "1",
+      "image": Object {
+        "bucket": "karthik",
+        "key": "karthik",
+      },
+      "overlays": null,
+      "title": "karthik",
+    },
+    "loading": false,
+    "networkStatus": 7,
+    "refetch": [Function],
+    "startPolling": [Function],
+    "stopPolling": [Function],
+    "subscribeToMore": [Function],
+    "updateQuery": [Function],
+    "variables": Object {
+      "id": "1",
+    },
+  },
+  "id": "1",
+  "updateDrawboard": [Function],
+}
+`;
+
+exports[`GraphQL various states: before get 1`] = `
+Object {
+  "data": Object {
+    "error": undefined,
+    "fetchMore": [Function],
+    "loading": true,
+    "networkStatus": 1,
+    "refetch": [Function],
+    "startPolling": [Function],
+    "stopPolling": [Function],
+    "subscribeToMore": [Function],
+    "updateQuery": [Function],
+    "variables": Object {
+      "id": "1",
+    },
+  },
+  "id": "1",
+  "updateDrawboard": [Function],
+}
+`;
