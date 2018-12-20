@@ -1,11 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Canvas /> should render without crashing 1`] = `
+exports[`Canvas should mount without any problems 1`] = `
 <div
   className="Container"
 >
+  <img
+    alt="background"
+    className="Background"
+    onLoad={[Function]}
+    src="https://test.cloud.com/hello.png"
+  />
+</div>
+`;
+
+exports[`Canvas should set height and width of canvas based on the current state 1`] = `
+<div
+  className="Container"
+>
+  <img
+    alt="background"
+    className="Background"
+    onLoad={[Function]}
+    src="https://test.cloud.com/hello.png"
+  />
   <canvas
     className="Canvas"
+    height={400}
+    width={300}
+  />
+</div>
+`;
+
+exports[`Canvas should show canvas after the image loads 1`] = `
+<div
+  className="Container"
+>
+  <img
+    alt="background"
+    className="Background"
+    onLoad={[Function]}
+    src="https://test.cloud.com/hello.png"
+  />
+  <canvas
+    className="Canvas"
+    height={0}
+    width={0}
   />
 </div>
 `;
