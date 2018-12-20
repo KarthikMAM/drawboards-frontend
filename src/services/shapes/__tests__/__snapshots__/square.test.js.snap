@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Object {
+  "init": Object {
+    "@states/CREATE": "@states/READY",
+  },
+  "mousedown": Object {
+    "@states/READY": "@states/RECORDING",
+  },
+  "mouseleave": Object {
+    "@states/RECORDING": "@states/FINISH",
+  },
+  "mousemove": Object {
+    "@states/RECORDING": "@states/RECORDING",
+  },
+  "mouseup": Object {
+    "@states/RECORDING": "@states/FINISH",
+  },
+}
+`;
+
+exports[`freehand draw should draw all points properly with scaling 1`] = `
+Object {
+  "lineTo": [MockFunction] {
+    "calls": Array [
+      Array [
+        20,
+        60,
+      ],
+      Array [
+        32,
+        86,
+      ],
+      Array [
+        34,
+        88,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "isThrow": false,
+        "value": undefined,
+      },
+      Object {
+        "isThrow": false,
+        "value": undefined,
+      },
+      Object {
+        "isThrow": false,
+        "value": undefined,
+      },
+    ],
+  },
+  "moveTo": [MockFunction] {
+    "calls": Array [
+      Array [
+        20,
+        60,
+      ],
+    ],
+    "results": Array [
+      Object {
+        "isThrow": false,
+        "value": undefined,
+      },
+    ],
+  },
+  "stroke": [MockFunction] {
+    "calls": Array [
+      Array [],
+    ],
+    "results": Array [
+      Object {
+        "isThrow": false,
+        "value": undefined,
+      },
+    ],
+  },
+  "strokeStyle": "green",
+}
+`;
+
+exports[`freehand transitions reduce should append the payload to the end during mousemove, mouseup and mouseleave events 1`] = `
+Object {
+  "points": Array [
+    Object {
+      "x": 0.5,
+      "y": 0.6,
+    },
+    undefined,
+  ],
+}
+`;
+
+exports[`freehand transitions reduce should append the payload to the end during mousemove, mouseup and mouseleave events 2`] = `
+Object {
+  "points": Array [
+    Object {
+      "x": 0.5,
+      "y": 0.6,
+    },
+    undefined,
+  ],
+}
+`;
+
+exports[`freehand transitions reduce should append the payload to the end during mousemove, mouseup and mouseleave events 3`] = `
+Object {
+  "points": Array [
+    Object {
+      "x": 0.5,
+      "y": 0.6,
+    },
+    undefined,
+  ],
+}
+`;
+
+exports[`freehand transitions reduce should append the payload to the end during mousemove, mouseup and mouseleave events 4`] = `
+Object {
+  "points": Array [
+    Object {
+      "x": 0.5,
+      "y": 0.6,
+    },
+    undefined,
+  ],
+}
+`;
